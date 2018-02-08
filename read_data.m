@@ -49,7 +49,7 @@ col_names = {'motion_cols', 'orien_cols', 'state_cols'};
 col_names_cell = {{'motion_cols', 'orien_cols', 'state_cols'}, {'motion_cols', 'orien_cols'}, ...
                   {'motion_cols', 'state_cols'}, {'orien_cols', 'state_cols'} };
 
-components = 1:5 % 1: Random, 2: context, 3: modifier, 4: c + m, 5: m - c
+components = 1:5; % 1: Random, 2: context, 3: modifier, 4: c + m, 5: m - c
 result_info = [];
 full_loa_info = []; % num_commands x numel(components)
 
