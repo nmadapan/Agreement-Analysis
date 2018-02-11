@@ -32,8 +32,11 @@ for name_idx = 1 : numel(col_names)
 end
 sd_cols = sort(sd_cols);
 
-ag_values = zeros(34, 5, 3);
-argmax_command_ids = zeros(34, 5);
+% 3 methods
+ag_values = zeros(num_cmd, numel(components), 3);
+argmax_lexicon_ids = cell(num_cmd, numel(components));
+popularity = zeros(num_cmd, numel(components));
+
 metric = 'jaccard';
 
 for comp_idx = 1:numel(components)
@@ -64,20 +67,43 @@ for comp_idx = 1:numel(components)
     Y = permute(Y, [3,2,1]); % 9 x 9 x 34 % Rows are semantic vectors
     
     for cmd_idx = 1 : size(Y, 3)
-       sem_mat_cmd = Y(:,:,cmd_idx) ;
-       [~, IA, IC] = unique(sem_mat_cmd, 'rows');
-       array = sum(IC == (1:numel(IA)), 1);
-       [~, temp] = max(array);
-       argmax_command_ids(cmd_idx, comp_idx) = IA(temp);
-       if array(temp) == 1
-           argmax_command_ids(cmd_idx, comp_idx) = -1;
-       end
+        % Extract semantic vectors of 9 gestures for one command
+        sem_mat_cmd = Y(:,:,cmd_idx) ; % 9 gestures x numel(sd_cols)
+        
+        % Find unique vectors. This should be <= 9
+        [~, IA, IC] = unique(sem_mat_cmd, 'rows');
+        H = (IC == (1:numel(IA)));
+        
+        % Frequency of unique gestures
+        freq_of_uniq_gestures = sum(H, 1);
+        
+        % Frequeny of the gesture that is repeated the most
+        max_freq = max(freq_of_uniq_gestures);
+        
+        % Find all of the best lexicon ids 
+        temp = find(freq_of_uniq_gestures == max_freq);
+        [row_ids, ~] = find(H(:, temp));
+        argmax_lexicon_ids{cmd_idx, comp_idx} = mat2str(sort(row_ids));
+        
+        % Percentage of subjects (9) that choose the gesture that repeated the most
+        popularity(cmd_idx, comp_idx) = max_freq / size(H,1);
 
-       ag_values(cmd_idx, comp_idx, 1) = loa_wobbrock_2010(array);
-       ag_values(cmd_idx, comp_idx, 2) = loa_wobbrock_2015(array);
-       ag_values(cmd_idx, comp_idx, 3) = loa_semantics(sem_mat_cmd, metric);
+        % Compute agreement by three methods
+        % Method 1 : Wobbrock paper in 2010
+        ag_values(cmd_idx, comp_idx, 1) = loa_wobbrock_2010(freq_of_uniq_gestures);
+        
+        % Method 2 : Wobbrock paper in 2010
+        ag_values(cmd_idx, comp_idx, 2) = loa_wobbrock_2015(freq_of_uniq_gestures);
+        
+        % Method 3 : CHI Paper (Our method)
+        ag_values(cmd_idx, comp_idx, 3) = loa_semantics(sem_mat_cmd, metric);
     end
 end
 
-ag_values = ag_values(reduced_command_ids,:);
-argmax_command_ids = argmax_command_ids(reduced_command_ids,4);
+% Extracting only the results for the following condition:
+    % reduced command ids
+    % context + modifier case
+    % only method 1 and 2
+ag_values = permute(ag_values(reduced_command_ids, 4, 1:2), [1,3,2]);
+argmax_lexicon_ids = argmax_lexicon_ids(reduced_command_ids, 4);
+popularity = popularity(reduced_command_ids, 4);

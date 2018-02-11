@@ -8,9 +8,9 @@ function loa = loa_semantics(Y, metric)
     % Hence distance between two zero vectors is 1. 
     % This will make their contribution zero in the similarity.
 
-    if(sum(sum(isnan(Y))) ~= 0)
-        sprintf('NaNs (%d) replaced by 1 for command index', sum(sum(isnan(Y))))
-    end
+%     if(sum(sum(isnan(Y))) ~= 0)
+%         sprintf('NaNs (%d) replaced by 1 for command index', sum(sum(isnan(Y))))
+%     end
 
     Y(isnan(Y)) = 1;
     loa = 1 - sum(sum(Y)) / ((numel(Y)-size(Y,1)) / 2.0);
