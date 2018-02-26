@@ -91,17 +91,3 @@ for comp_idx = 1:numel(components)
 end
 
 result_info
-
-%% Functions
-function Out = extract_cmd_data(Y,idx)
-Out = reshape(Y(idx,:,:),[size(Y,2),size(Y,3)])';
-end
-
-
-
-
-
-
-
-
-

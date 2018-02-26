@@ -79,5 +79,5 @@ for comp_idx = 1:numel(components)
     end
 end
 
-ag_values = ag_values(reduced_command_ids,:);
+ag_values = permute(ag_values(reduced_command_ids,4,:), [1 3 2]);
 argmax_command_ids = argmax_command_ids(reduced_command_ids,4);
