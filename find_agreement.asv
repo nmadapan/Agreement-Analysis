@@ -14,10 +14,10 @@ num_top_descs = 10;
 load('data')
 
 %% Initialization
-num_cmd = numel(size(modifier_data, 1)); % No. of commands - 34
+num_cmd = size(modifier_data, 1); % No. of commands - 34
 ag_values = zeros(num_cmd, 3); % Aggreement values - 34 x 3 {34: no. of commands,  3: no. of methods}
-argmax_lexicon_ids = cell(num_cmd); % Most popular lexicon ids - cell(34 x 1) - each element is of form '[1;3;5;7;9]'
-popularity = zeros(num_cmd); % popularity of most frequent gesture - floats b/w [0,100] - 34 x 1
+argmax_lexicon_ids = cell(num_cmd, 1); % Most popular lexicon ids - cell(34 x 1) - each element is of form '[1;3;5;7;9]'
+popularity = zeros(num_cmd, 1); % popularity of most frequent gesture - floats b/w [0,100] - 34 x 1
 sd_cols = gen_sd_cols(col_names); % sd_cols contains all the column indices to consider - 55 x 1
 Y = get_base_matrix( component_idx , sd_cols); % 9 x _ x 34 {9: no. of lexicons, _: no. of elements in sd_cols}
 
@@ -56,7 +56,7 @@ freq = permute(sum(Y), [3, 2, 1]); % 34 x 55 % Finding the frequency of each des
 argmax_freq = argmax_freq(reduced_command_ids,1:num_top_descs );
 
 argmax_sds = sd_names(act_cols(argmax_freq));
-max_freq = floor(100*max_freq(reduced_command_ids, 1:num_top_descs )/9);
+max_freq = 100*max_freq(reduced_command_ids, 1:num_top_descs )/9;
 popularity = 100*popularity(reduced_command_ids);
 
 ag_values = ag_values(reduced_command_ids, :);
@@ -69,7 +69,8 @@ for i = 1 : 28
    end
 end
 
-save('')
+base_matrix = Y(:, :, reduced_command_ids);
+save('results_con_plus_mod', 'argmax_sds', 'max_freq', 'popularity', 'ag_values', 'argmax_lexicon_ids', 'final_cell', 'base_matrix', '-appen')
 
 function sd_cols = gen_sd_cols(col_names)
     % Inputs:

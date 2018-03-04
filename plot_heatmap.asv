@@ -1,0 +1,20 @@
+clear;
+close all;
+clc;
+
+load('results_con_plus_mod.mat')
+load('data', 'cmd_names', 'sd_names', 'modifier_indices', 'act_cols', 'reduced_command_ids')
+
+cmd_names = {'Scroll';'Scroll Up';'Scroll Down';'Flip';'Flip Horizontal';'Flip Vertical';'Rotate';'Rotate CW';'Rotate CCW';'Zoom';'Zoom In';'Zoom Out';'Switch Panel';'Switch Panel Left';'Switch Panel Right';'Switch Panel Up';'Switch Panel Down';'Pan';'Pan Left ';'Pan Right';'Pan Up';'Pan Down';'Ruler';'Ruler Measure';'Ruler Delete';'Reference Lines';'Reference Lines On';'Reference Lines Off';'PIW';'Window Open';'Window Close';'Manual Contrast';'Contrast Increase';'Contrast Decrease';'Layout';'Layout 1 Panel';'Layout 2 Panels';'Layout 3 Panels';'Layout 4 Panels';'Layout 2 x 2 Panels';'Layout 2 x 3 Panels';'Contrast Presets';'Contrast Standard I';'Contrast Standard II';'Contrast Standard III';'Contrast Standard IV'}
+cmd_names = cmd_names(modifier_indices(:,1));
+cmd_names = cmd_names(reduced_command_ids);
+
+sd_names = {'ND. motion - Right';'ND. motion - Up';'ND. motion - Left';'ND. motion - Down';'ND. motion - Forward';'ND. motion - Backward';'ND. motion - CW';'ND. motion - CCW';'ND. motion - Iterative';'ND. motion - Circle';'ND. motion - Rectangle';'ND. motion - Other';'D. motion - Right';'D. motion - Up';'D. motion - Left';'D. motion - Down';'D. motion - Forward';'D. motion - Backward';'D. motion - CW';'D. motion - CCW';'D. motion - Iterative';'D. motion - Circle';'D. motion - Rectangle';'D. motion - Other';'Comb. motion - Circle';'Comb. motion - Rectangle';'Inward flow';'Outward flow';'ND. orien.  - Right';'ND. orien.  - Up';'ND. orien.  - Left';'ND. orien.  - Down';'ND. orien.  - Forward';'ND. orien.  - Backward';'ND. orien.  - Other';'D. orien.  - Right';'D. orien.  - Up';'D. orien.  - Left';'D. orien.  - Down';'D. orien.  - Forward';'D. orien.  - Backward';'D. orien.  - Other';'ND. motion plane - Sagittal';'ND. motion plane - Frontal';'ND. motion plane - Transverse';'ND. motion plane - None';'D. motion plane - Sagittal';'D. motion plane - Frontal';'D. motion plane - Transverse';'D. motion plane - None';'ND. state - Closed-0';'ND. state - 1';'ND. state - 2';'ND. state - 3';'ND. state - 4';'ND. state - 5';'ND. state - C';'ND. state - V';'D. state - 0';'D. state - 1';'D. state - 2';'D. state - 3';'D. state - 4';'D. state - 5';'D. state - C';'D. state - V';'PD Shift'}
+sd_names = sd_names(act_cols);
+sd_names = sd_names(left_right_indices);
+
+Y = permute(mean(base_matrix, 1), [3, 2, 1]);
+Y = Y(:, left_right_indices);
+
+heatmap(Y, sd_names, cmd_names, [], 'Colormap', 'gray', 'ColorLevels', 64, ...
+    'FontSize', 14, 'GridLines', '-', 'TickAngle', 45, 'ShowAllTicks', 1, 'TickFontSize')

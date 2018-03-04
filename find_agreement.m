@@ -12,6 +12,7 @@ num_top_descs = 10;
 
 %%
 load('data')
+sd_names = {'ND. Movement - Right';'ND. Movement - Up';'ND. Movement - Left';'ND. Movement - Down';'ND. Movement - Forward';'ND. Movement - Backward';'ND. Movement - CW';'ND. Movement - CCW';'ND. Movement - Iterative';'ND. Movement - Circle';'ND. Movement - Rectangle';'ND. Movement - Other';'Movement - Right';' Movement - Up';' Movement - Left';' Movement - Down';' Movement - Forward';' Movement - Backward';' Movement - CW';' Movement - CCW';' Movement - Iterative';' Movement - Circle';' Movement - Rectangle';' Movement - Other';'Comb. Movement - Circle';'Comb. Movement - Rectangle';'Inward flow';'Outward flow';'ND. orientation  - Right';'ND. orientation  - Up';'ND. orientation  - Left';'ND. orientation  - Down';'ND. orientation  - Forward';'ND. orientation  - Backward';'ND. orientation  - Other';' Orientation  - Right';' Orientation  - Up';' Orientation  - Left';' Orientation  - Down';' Orientation  - Forward';' Orientation  - Backward';' Orientation  - Other';'ND. Movement plane - Sagittal';'ND. Movement plane - Frontal';'ND. Movement plane - Transverse';'ND. Movement plane - None';'Movement plane - Sagittal';'Movement plane - Frontal';'Movement plane - Transverse';'Movement plane - None';'ND. state - Closed-0';'ND. state - 1';'ND. state - 2';'ND. state - 3';'ND. state - 4';'ND. state - 5';'ND. state - C';'ND. state - V';'State - 0';'State - 1';'State - 2';'State - 3';'State - 4';'State - 5';'State - C';'State - V';'PD Shift'}
 
 %% Initialization
 num_cmd = size(modifier_data, 1); % No. of commands - 34
@@ -56,7 +57,7 @@ freq = permute(sum(Y), [3, 2, 1]); % 34 x 55 % Finding the frequency of each des
 argmax_freq = argmax_freq(reduced_command_ids,1:num_top_descs );
 
 argmax_sds = sd_names(act_cols(argmax_freq));
-max_freq = floor(100*max_freq(reduced_command_ids, 1:num_top_descs )/9);
+max_freq = 100*max_freq(reduced_command_ids, 1:num_top_descs )/9;
 popularity = 100*popularity(reduced_command_ids);
 
 ag_values = ag_values(reduced_command_ids, :);
@@ -69,7 +70,8 @@ for i = 1 : 28
    end
 end
 
-save('results_con_plus_mod', 'argmax_sds', 'max_freq', 'popularity', 'ag_values', 'argmax_lexicon_ids', 'final_cell')
+base_matrix = Y(:, :, reduced_command_ids);
+save('results_con_plus_mod', 'argmax_sds', 'max_freq', 'popularity', 'ag_values', 'argmax_lexicon_ids', 'final_cell', 'base_matrix', '-append')
 
 function sd_cols = gen_sd_cols(col_names)
     % Inputs:
