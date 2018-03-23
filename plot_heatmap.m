@@ -16,7 +16,7 @@ sd_names = sd_names(left_right_indices);
 Y = permute(mean(base_matrix, 1), [3, 2, 1]);
 Y = Y(:, left_right_indices);
 
-heatmap(Y, sd_names, cmd_names, [], 'Colormap', 'gray', 'ColorLevels', 64, ...
+heatmap(Y, sd_names, cmd_names, [], 'Colormap', 'jet', 'ColorLevels', 64, 'ColorBar', true, ...
     'FontSize', 14, 'GridLines', '-', 'TickAngle', 45, 'ShowAllTicks', 1, 'TickFontSize', 12)
 
 xlabel('Gesture Descriptors for Dominant Hand', 'FontSize', 14);
