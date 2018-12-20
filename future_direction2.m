@@ -1,12 +1,12 @@
 clear;
 clc;
 
-N = 10; % No. of subjects
-D = 20; % No. of descriptors
+N = 9; % No. of subjects
+D = 55; % No. of descriptors
 
 % M = zeros(N, D);
 
-num_iter = 1e5;
+num_iter = 1e3;
 num_bins = 100;
 
 freqs = zeros(1, num_bins);
@@ -36,3 +36,5 @@ grid on
 xlabel('Agreement Rate', 'FontSize', 12)
 ylabel('Normalized Frequency', 'FontSize', 12)
 title('PDF', 'FontSize', 14)
+xlim([0, 1])
+ylim([0, 1])
