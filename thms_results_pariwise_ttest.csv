@@ -1,0 +1,125 @@
+Command-1,Command-2,P-Value
+Scroll Up,Zoom In,0.047971
+Scroll Up,Switch Panel Left,0.016614
+Scroll Up,Switch Panel Right,0.012478
+Scroll Up,Measure,0.014427
+Scroll Up,Close,0.025723
+Scroll Down,1 Panel,0.043598
+Flip Horizontal,Zoom In,0.0042594
+Flip Horizontal,Zoom Out,0.0051264
+Flip Horizontal,Switch Panel Left,0.0010683
+Flip Horizontal,Switch Panel Right,0.00082632
+Flip Horizontal,Switch Panel Up,0.042887
+Flip Horizontal,Switch Panel Down,0.0080314
+Flip Horizontal,Measure,0.00061841
+Flip Horizontal,Open,0.0098319
+Flip Horizontal,Close,0.0014368
+Flip Vertical,Zoom In,0.016844
+Flip Vertical,Zoom Out,0.02076
+Flip Vertical,Switch Panel Left,0.0045832
+Flip Vertical,Switch Panel Right,0.0038174
+Flip Vertical,Switch Panel Down,0.026885
+Flip Vertical,Measure,0.0015811
+Flip Vertical,Open,0.024147
+Flip Vertical,Close,0.0011807
+Rotate CW,Zoom In,0.044719
+Rotate CW,Switch Panel Left,0.0056052
+Rotate CW,Switch Panel Right,0.0048069
+Rotate CW,Switch Panel Down,0.0087162
+Rotate CW,Measure,0.0081027
+Rotate CW,Close,0.012517
+Rotate CCW,Zoom In,0.039736
+Rotate CCW,Zoom Out,0.049149
+Rotate CCW,Switch Panel Left,0.004358
+Rotate CCW,Switch Panel Right,0.0036811
+Rotate CCW,Switch Panel Down,0.0075327
+Rotate CCW,Measure,0.0078294
+Rotate CCW,Close,0.012231
+Zoom In,Zoom Out,0.01598
+Zoom In,Pan Up,0.010879
+Zoom In,Increase,0.0097084
+Zoom In,1 Panel,0.0029845
+Zoom In,2 Panels,0.0058856
+Zoom In,3 Panels,0.014098
+Zoom In,Standard I,0.0039269
+Zoom In,Standard II,0.0067041
+Zoom Out,Pan Up,0.014175
+Zoom Out,Increase,0.012327
+Zoom Out,1 Panel,0.0041555
+Zoom Out,2 Panels,0.00802
+Zoom Out,3 Panels,0.018625
+Zoom Out,Standard I,0.0053007
+Zoom Out,Standard II,0.0089559
+Switch Panel Left,Switch Panel Up,0.00057783
+Switch Panel Left,Pan Up,0.0064345
+Switch Panel Left,Delete,0.01557
+Switch Panel Left,Increase,0.0014225
+Switch Panel Left,Decrease,0.021563
+Switch Panel Left,1 Panel,0.00073871
+Switch Panel Left,2 Panels,0.0039186
+Switch Panel Left,3 Panels,0.0079955
+Switch Panel Left,4 Panels,0.034519
+Switch Panel Left,Standard I,0.0025515
+Switch Panel Left,Standard II,0.0049646
+Switch Panel Right,Switch Panel Up,0.00026601
+Switch Panel Right,Pan Right,0.047503
+Switch Panel Right,Pan Up,0.0049171
+Switch Panel Right,Delete,0.01377
+Switch Panel Right,Increase,0.0010577
+Switch Panel Right,Decrease,0.017394
+Switch Panel Right,1 Panel,0.0005805
+Switch Panel Right,2 Panels,0.0032044
+Switch Panel Right,3 Panels,0.0066237
+Switch Panel Right,4 Panels,0.029307
+Switch Panel Right,Standard I,0.0019409
+Switch Panel Right,Standard II,0.0038079
+Switch Panel Up,Switch Panel Down,0.0062974
+Switch Panel Up,Increase,0.032454
+Switch Panel Up,1 Panel,0.013996
+Switch Panel Down,Pan Up,0.013687
+Switch Panel Down,Increase,0.0024153
+Switch Panel Down,1 Panel,0.0011346
+Switch Panel Down,2 Panels,0.0084994
+Switch Panel Down,3 Panels,0.018019
+Switch Panel Down,Standard I,0.0088405
+Switch Panel Down,Standard II,0.022103
+Pan Left ,Pan Right,0.014676
+Pan Left ,Pan Up,0.00069189
+Pan Left ,Measure,0.034216
+Pan Right,Pan Up,0.0021021
+Pan Right,Measure,0.026015
+Pan Up,Pan Down,0.00067586
+Pan Up,Measure,0.003181
+Pan Up,Open,0.022916
+Pan Up,Close,0.0055165
+Pan Down,Measure,0.027468
+Measure,Delete,0.020843
+Measure,Increase,0.0010921
+Measure,Decrease,0.0077609
+Measure,1 Panel,0.00078696
+Measure,2 Panels,0.0019698
+Measure,3 Panels,0.0062046
+Measure,4 Panels,0.022604
+Measure,Standard I,0.002846
+Measure,Standard II,0.0065261
+Delete,Close,0.029344
+Open,Increase,0.016573
+Open,1 Panel,0.0061057
+Open,2 Panels,0.010454
+Open,3 Panels,0.027291
+Open,Standard I,0.0079084
+Open,Standard II,0.014788
+Close,Increase,0.0048194
+Close,Decrease,0.035724
+Close,1 Panel,0.00092145
+Close,2 Panels,0.0015908
+Close,3 Panels,0.0062046
+Close,4 Panels,0.025634
+Close,Standard I,0.0016096
+Close,Standard II,0.0029458
+Increase,Decrease,0.0024078
+1 Panel,3 Panels,0.0013101
+1 Panel,4 Panels,1.0289e-06
+2 Panels,3 Panels,0.020716
+2 Panels,4 Panels,0.00079958
+3 Panels,4 Panels,0.0019855

@@ -1,0 +1,378 @@
+Scroll Up				Scroll Down				0			0.4249
+Scroll Up				Flip Horizontal				0			0.0885
+Scroll Up				Flip Vertical				0			0.3050
+Scroll Up				Rotate CW				0			0.5357
+Scroll Up				Rotate CCW				0			0.5409
+Scroll Up				Zoom In				1			0.0480
+Scroll Up				Zoom Out				0			0.0598
+Scroll Up				Left				1			0.0166
+Scroll Up				Right				1			0.0125
+Scroll Up				Up				0			0.5320
+Scroll Up				Down				0			0.1249
+Scroll Up				Left 				0			0.9681
+Scroll Up				Right				0			0.9188
+Scroll Up				Up				0			0.2567
+Scroll Up				Down				0			0.9306
+Scroll Up				Measure				1			0.0144
+Scroll Up				Delete				0			0.3034
+Scroll Up				Open				0			0.0981
+Scroll Up				Close				1			0.0257
+Scroll Up				Increase				0			0.2026
+Scroll Up				Decrease				0			0.6869
+Scroll Up				1 Panel				0			0.0800
+Scroll Up				2 Panels				0			0.1594
+Scroll Up				3 Panels				0			0.3107
+Scroll Up				4 Panels				0			0.7546
+Scroll Up				Standard I				0			0.1634
+Scroll Up				Standard II				0			0.2851
+Scroll Down				Flip Horizontal				0			0.0682
+Scroll Down				Flip Vertical				0			0.1755
+Scroll Down				Rotate CW				0			0.3945
+Scroll Down				Rotate CCW				0			0.4027
+Scroll Down				Zoom In				0			0.0859
+Scroll Down				Zoom Out				0			0.1058
+Scroll Down				Left				0			0.0905
+Scroll Down				Right				0			0.0758
+Scroll Down				Up				0			0.8392
+Scroll Down				Down				0			0.3056
+Scroll Down				Left 				0			0.7967
+Scroll Down				Right				0			0.6987
+Scroll Down				Up				0			0.1832
+Scroll Down				Down				0			0.7084
+Scroll Down				Measure				0			0.0623
+Scroll Down				Delete				0			0.2391
+Scroll Down				Open				0			0.1779
+Scroll Down				Close				0			0.0616
+Scroll Down				Increase				0			0.1309
+Scroll Down				Decrease				0			0.5002
+Scroll Down				1 Panel				1			0.0436
+Scroll Down				2 Panels				0			0.0789
+Scroll Down				3 Panels				0			0.1791
+Scroll Down				4 Panels				0			0.5202
+Scroll Down				Standard I				0			0.0883
+Scroll Down				Standard II				0			0.1612
+Flip Horizontal				Flip Vertical				0			0.2353
+Flip Horizontal				Rotate CW				0			0.3328
+Flip Horizontal				Rotate CCW				0			0.2997
+Flip Horizontal				Zoom In				1			0.0043
+Flip Horizontal				Zoom Out				1			0.0051
+Flip Horizontal				Left				1			0.0011
+Flip Horizontal				Right				1			0.0008
+Flip Horizontal				Up				1			0.0429
+Flip Horizontal				Down				1			0.0080
+Flip Horizontal				Left 				0			0.1175
+Flip Horizontal				Right				0			0.1447
+Flip Horizontal				Up				0			0.5353
+Flip Horizontal				Down				0			0.1418
+Flip Horizontal				Measure				1			0.0006
+Flip Horizontal				Delete				0			0.6824
+Flip Horizontal				Open				1			0.0098
+Flip Horizontal				Close				1			0.0014
+Flip Horizontal				Increase				0			0.6485
+Flip Horizontal				Decrease				0			0.1661
+Flip Horizontal				1 Panel				0			0.8726
+Flip Horizontal				2 Panels				0			0.7632
+Flip Horizontal				3 Panels				0			0.5063
+Flip Horizontal				4 Panels				0			0.2178
+Flip Horizontal				Standard I				0			0.5240
+Flip Horizontal				Standard II				0			0.3985
+Flip Vertical				Rotate CW				0			0.7749
+Flip Vertical				Rotate CCW				0			0.7447
+Flip Vertical				Zoom In				1			0.0168
+Flip Vertical				Zoom Out				1			0.0208
+Flip Vertical				Left				1			0.0046
+Flip Vertical				Right				1			0.0038
+Flip Vertical				Up				0			0.1523
+Flip Vertical				Down				1			0.0269
+Flip Vertical				Left 				0			0.4081
+Flip Vertical				Right				0			0.4791
+Flip Vertical				Up				0			0.8481
+Flip Vertical				Down				0			0.4702
+Flip Vertical				Measure				1			0.0016
+Flip Vertical				Delete				0			0.8314
+Flip Vertical				Open				1			0.0241
+Flip Vertical				Close				1			0.0012
+Flip Vertical				Increase				0			0.6604
+Flip Vertical				Decrease				0			0.6307
+Flip Vertical				1 Panel				0			0.4950
+Flip Vertical				2 Panels				0			0.6407
+Flip Vertical				3 Panels				0			0.9320
+Flip Vertical				4 Panels				0			0.6007
+Flip Vertical				Standard I				0			0.8219
+Flip Vertical				Standard II				0			0.9592
+Rotate CW				Rotate CCW				0			0.8899
+Rotate CW				Zoom In				1			0.0447
+Rotate CW				Zoom Out				0			0.0553
+Rotate CW				Left				1			0.0056
+Rotate CW				Right				1			0.0048
+Rotate CW				Up				0			0.1465
+Rotate CW				Down				1			0.0087
+Rotate CW				Left 				0			0.6030
+Rotate CW				Right				0			0.6829
+Rotate CW				Up				0			0.6552
+Rotate CW				Down				0			0.6750
+Rotate CW				Measure				1			0.0081
+Rotate CW				Delete				0			0.6730
+Rotate CW				Open				0			0.0507
+Rotate CW				Close				1			0.0125
+Rotate CW				Increase				0			0.3859
+Rotate CW				Decrease				0			0.8486
+Rotate CW				1 Panel				0			0.2074
+Rotate CW				2 Panels				0			0.3703
+Rotate CW				3 Panels				0			0.6469
+Rotate CW				4 Panels				0			0.7442
+Rotate CW				Standard I				0			0.5781
+Rotate CW				Standard II				0			0.7928
+Rotate CCW				Zoom In				1			0.0397
+Rotate CCW				Zoom Out				1			0.0491
+Rotate CCW				Left				1			0.0044
+Rotate CCW				Right				1			0.0037
+Rotate CCW				Up				0			0.1316
+Rotate CCW				Down				1			0.0075
+Rotate CCW				Left 				0			0.6076
+Rotate CCW				Right				0			0.6902
+Rotate CCW				Up				0			0.6332
+Rotate CCW				Down				0			0.6820
+Rotate CCW				Measure				1			0.0078
+Rotate CCW				Delete				0			0.6598
+Rotate CCW				Open				0			0.0523
+Rotate CCW				Close				1			0.0122
+Rotate CCW				Increase				0			0.3701
+Rotate CCW				Decrease				0			0.8667
+Rotate CCW				1 Panel				0			0.1981
+Rotate CCW				2 Panels				0			0.3624
+Rotate CCW				3 Panels				0			0.6302
+Rotate CCW				4 Panels				0			0.7647
+Rotate CCW				Standard I				0			0.5576
+Rotate CCW				Standard II				0			0.7699
+Zoom In				Zoom Out				1			0.0160
+Zoom In				Left				0			0.8493
+Zoom In				Right				0			0.8983
+Zoom In				Up				0			0.1711
+Zoom In				Down				0			0.4803
+Zoom In				Left 				0			0.0810
+Zoom In				Right				0			0.0615
+Zoom In				Up				1			0.0109
+Zoom In				Down				0			0.0687
+Zoom In				Measure				0			0.9382
+Zoom In				Delete				0			0.0644
+Zoom In				Open				0			0.6605
+Zoom In				Close				0			0.8657
+Zoom In				Increase				1			0.0097
+Zoom In				Decrease				0			0.0522
+Zoom In				1 Panel				1			0.0030
+Zoom In				2 Panels				1			0.0059
+Zoom In				3 Panels				1			0.0141
+Zoom In				4 Panels				0			0.0519
+Zoom In				Standard I				1			0.0039
+Zoom In				Standard II				1			0.0067
+Zoom Out				Left				0			0.9267
+Zoom Out				Right				0			0.9768
+Zoom Out				Up				0			0.2037
+Zoom Out				Down				0			0.5424
+Zoom Out				Left 				0			0.0997
+Zoom Out				Right				0			0.0767
+Zoom Out				Up				1			0.0142
+Zoom Out				Down				0			0.0847
+Zoom Out				Measure				0			0.8682
+Zoom Out				Delete				0			0.0734
+Zoom Out				Open				0			0.7285
+Zoom Out				Close				0			0.9502
+Zoom Out				Increase				1			0.0123
+Zoom Out				Decrease				0			0.0637
+Zoom Out				1 Panel				1			0.0042
+Zoom Out				2 Panels				1			0.0080
+Zoom Out				3 Panels				1			0.0186
+Zoom Out				4 Panels				0			0.0653
+Zoom Out				Standard I				1			0.0053
+Zoom Out				Standard II				1			0.0090
+Left				Right				0			0.1608
+Left				Up				1			0.0006
+Left				Down				0			0.1304
+Left				Left 				0			0.0756
+Left				Right				0			0.0577
+Left				Up				1			0.0064
+Left				Down				0			0.0613
+Left				Measure				0			0.7263
+Left				Delete				1			0.0156
+Left				Open				0			0.7276
+Left				Close				0			0.9639
+Left				Increase				1			0.0014
+Left				Decrease				1			0.0216
+Left				1 Panel				1			0.0007
+Left				2 Panels				1			0.0039
+Left				3 Panels				1			0.0080
+Left				4 Panels				1			0.0345
+Left				Standard I				1			0.0026
+Left				Standard II				1			0.0050
+Right				Up				1			0.0003
+Right				Down				0			0.0906
+Right				Left 				0			0.0628
+Right				Right				1			0.0475
+Right				Up				1			0.0049
+Right				Down				0			0.0506
+Right				Measure				0			0.7867
+Right				Delete				1			0.0138
+Right				Open				0			0.6700
+Right				Close				0			0.9691
+Right				Increase				1			0.0011
+Right				Decrease				1			0.0174
+Right				1 Panel				1			0.0006
+Right				2 Panels				1			0.0032
+Right				3 Panels				1			0.0066
+Right				4 Panels				1			0.0293
+Right				Standard I				1			0.0019
+Right				Standard II				1			0.0038
+Up				Down				1			0.0063
+Up				Left 				0			0.6163
+Up				Right				0			0.5188
+Up				Up				0			0.0903
+Up				Down				0			0.5337
+Up				Measure				0			0.0728
+Up				Delete				0			0.2115
+Up				Open				0			0.3071
+Up				Close				0			0.1430
+Up				Increase				1			0.0325
+Up				Decrease				0			0.3022
+Up				1 Panel				1			0.0140
+Up				2 Panels				0			0.0592
+Up				3 Panels				0			0.1195
+Up				4 Panels				0			0.3971
+Up				Standard I				0			0.0793
+Up				Standard II				0			0.1438
+Down				Left 				0			0.1890
+Down				Right				0			0.1468
+Down				Up				1			0.0137
+Down				Down				0			0.1548
+Down				Measure				0			0.3191
+Down				Delete				0			0.0719
+Down				Open				0			0.7718
+Down				Close				0			0.4759
+Down				Increase				1			0.0024
+Down				Decrease				0			0.0511
+Down				1 Panel				1			0.0011
+Down				2 Panels				1			0.0085
+Down				3 Panels				1			0.0180
+Down				4 Panels				0			0.0858
+Down				Standard I				1			0.0088
+Down				Standard II				1			0.0221
+Left 				Right				1			0.0147
+Left 				Up				1			0.0007
+Left 				Down				0			0.3242
+Left 				Measure				1			0.0342
+Left 				Delete				0			0.4646
+Left 				Open				0			0.1793
+Left 				Close				0			0.0697
+Left 				Increase				0			0.1948
+Left 				Decrease				0			0.6595
+Left 				1 Panel				0			0.1189
+Left 				2 Panels				0			0.1833
+Left 				3 Panels				0			0.3666
+Left 				4 Panels				0			0.7625
+Left 				Standard I				0			0.2592
+Left 				Standard II				0			0.3917
+Right				Up				1			0.0021
+Right				Down				0			0.8949
+Right				Measure				1			0.0260
+Right				Delete				0			0.5107
+Right				Open				0			0.1416
+Right				Close				0			0.0538
+Right				Increase				0			0.2433
+Right				Decrease				0			0.7606
+Right				1 Panel				0			0.1497
+Right				2 Panels				0			0.2250
+Right				3 Panels				0			0.4310
+Right				4 Panels				0			0.8594
+Right				Standard I				0			0.3094
+Right				Standard II				0			0.4603
+Up				Down				1			0.0007
+Up				Measure				1			0.0032
+Up				Delete				0			0.9557
+Up				Open				1			0.0229
+Up				Close				1			0.0055
+Up				Increase				0			0.8089
+Up				Decrease				0			0.5085
+Up				1 Panel				0			0.5948
+Up				2 Panels				0			0.7449
+Up				3 Panels				0			0.9218
+Up				4 Panels				0			0.4470
+Up				Standard I				0			0.9835
+Up				Standard II				0			0.7863
+Down				Measure				1			0.0275
+Down				Delete				0			0.5008
+Down				Open				0			0.1541
+Down				Close				0			0.0584
+Down				Increase				0			0.2423
+Down				Decrease				0			0.7520
+Down				1 Panel				0			0.1536
+Down				2 Panels				0			0.2279
+Down				3 Panels				0			0.4315
+Down				4 Panels				0			0.8509
+Down				Standard I				0			0.3087
+Down				Standard II				0			0.4570
+Measure				Delete				1			0.0208
+Measure				Open				0			0.5237
+Measure				Close				0			0.6972
+Measure				Increase				1			0.0011
+Measure				Decrease				1			0.0078
+Measure				1 Panel				1			0.0008
+Measure				2 Panels				1			0.0020
+Measure				3 Panels				1			0.0062
+Measure				4 Panels				1			0.0226
+Measure				Standard I				1			0.0028
+Measure				Standard II				1			0.0065
+Delete				Open				0			0.0505
+Delete				Close				1			0.0293
+Delete				Increase				0			0.9117
+Delete				Decrease				0			0.6257
+Delete				1 Panel				0			0.7560
+Delete				2 Panels				0			0.8648
+Delete				3 Panels				0			0.8953
+Delete				4 Panels				0			0.5427
+Delete				Standard I				0			0.9576
+Delete				Standard II				0			0.7843
+Open				Close				0			0.5700
+Open				Increase				1			0.0166
+Open				Decrease				0			0.0864
+Open				1 Panel				1			0.0061
+Open				2 Panels				1			0.0105
+Open				3 Panels				1			0.0273
+Open				4 Panels				0			0.0995
+Open				Standard I				1			0.0079
+Open				Standard II				1			0.0148
+Close				Increase				1			0.0048
+Close				Decrease				1			0.0357
+Close				1 Panel				1			0.0009
+Close				2 Panels				1			0.0016
+Close				3 Panels				1			0.0062
+Close				4 Panels				1			0.0256
+Close				Standard I				1			0.0016
+Close				Standard II				1			0.0029
+Increase				Decrease				1			0.0024
+Increase				1 Panel				0			0.7417
+Increase				2 Panels				0			0.9244
+Increase				3 Panels				0			0.6957
+Increase				4 Panels				0			0.2715
+Increase				Standard I				0			0.8089
+Increase				Standard II				0			0.6163
+Decrease				1 Panel				0			0.2082
+Decrease				2 Panels				0			0.3324
+Decrease				3 Panels				0			0.5785
+Decrease				4 Panels				0			0.9128
+Decrease				Standard I				0			0.4980
+Decrease				Standard II				0			0.6967
+1 Panel				2 Panels				0			0.5296
+1 Panel				3 Panels				1			0.0013
+1 Panel				4 Panels				1			0.0000
+1 Panel				Standard I				0			0.4698
+1 Panel				Standard II				0			0.2820
+2 Panels				3 Panels				1			0.0207
+2 Panels				4 Panels				1			0.0008
+2 Panels				Standard I				0			0.6639
+2 Panels				Standard II				0			0.4178
+3 Panels				4 Panels				1			0.0020
+3 Panels				Standard I				0			0.8596
+3 Panels				Standard II				0			0.8306
+4 Panels				Standard I				0			0.2581
+4 Panels				Standard II				0			0.4597
+Standard I				Standard II				0			0.2041

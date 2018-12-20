@@ -10,18 +10,17 @@ N = 9; % No. of subjects
 D = 55; % No. of descriptors
 num_iter = 1e6; % No. of iterations
 num_bins = 100; % No. of bins for agreement values
-
 use_custom_dist = 0; % 0 - False, 1 - True
 global distribution 
-distribution = [0.93, 0.07];
-
-N_list = 3:12;
-D_list = 5:10:100;
+distribution = [0.93, 0.07]; % discrete probabilities of 0 and 1
+N_list = 3:12; % List of values of N
+D_list = 5:10:100; % List of values of D
+write_fname_prefix = 'thms_pdf'; % Name of the mat file
 
 if(use_custom_dist == 0)
-    write_fname = 'thms_pdf_data.mat';
+    write_fname = [write_fname_prefix, '_data.mat'];
 else
-    write_fname = 'thms_pdf_cdist_data.mat';
+    write_fname = [write_fname_prefix, '_cdist_data.mat'];
 end
 
 %% Varying number of subjects
@@ -30,7 +29,7 @@ if(exist(write_fname, 'file'))
     x_list = x_list_vsub;
     y_list = y_list_vsub;
 else
-    [x_list, y_list] = get_pdf_loop_subjects(N_list, D, num_iter, num_bins, 'use_dist', use_custom_dist);
+    [x_list, y_list] = get_pdf_loop_subjects(N_list, D, 'num_iter', num_iter, 'num_bins', num_bins, 'use_dist', use_custom_dist);
 end
 figure;
 hold on;
@@ -61,7 +60,7 @@ if(exist(write_fname, 'file'))
     x_list = x_list_vdesc;
     y_list = y_list_vdesc;
 else
-    [x_list, y_list] = get_pdf_loop_descriptors(N, D_list, num_iter, num_bins, 'use_dist', use_custom_dist);
+    [x_list, y_list] = get_pdf_loop_descriptors(N, D_list, 'num_iter', num_iter, 'num_bins', num_bins, 'use_dist', use_custom_dist);
 end
 figure;
 hold on;
@@ -86,6 +85,7 @@ else
    save(write_fname, 'x_list_vdesc', 'y_list_vdesc')
 end
 
+%% Get PDF - Loop over the number of subjects
 function [x_list, y_list] = get_pdf_loop_subjects(N_list, D, varargin)
     parser = inputParser;
     addOptional(parser, 'num_iter', 1e4);
@@ -110,6 +110,7 @@ function [x_list, y_list] = get_pdf_loop_subjects(N_list, D, varargin)
     end
 end
 
+%% Get PDF - Loop over the number of descriptors
 function [x_list, y_list] = get_pdf_loop_descriptors(N, D_list, varargin)
     parser = inputParser;
     addOptional(parser, 'num_iter', 1e4);
@@ -134,6 +135,7 @@ function [x_list, y_list] = get_pdf_loop_descriptors(N, D_list, varargin)
     end
 end
 
+%% Get PDF - basic function to get the PDF for a given N and D
 function [t, freqs] = get_pdf(N, D, varargin)
     global distribution 
     parser = inputParser;

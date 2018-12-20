@@ -1,0 +1,24 @@
+Command-1,Command-2,P-Value
+Scroll Up,Switch Panel Up,0
+Scroll Up,Pan Right,0
+Scroll Down,Flip Vertical,0
+Scroll Down,Rotate CW,0
+Scroll Down,Rotate CCW,0
+Scroll Down,Switch Panel Up,0
+Scroll Down,Pan Left ,0
+Scroll Down,Pan Down,0
+Flip Horizontal,Standard I,0
+Rotate CW,2 Panels,0
+Rotate CW,3 Panels,0
+Rotate CCW,3 Panels,0
+Switch Panel Left,Open,0
+Switch Panel Right,Open,0
+Switch Panel Up,Pan Left ,0
+Switch Panel Up,Pan Right,0
+Switch Panel Up,Pan Down,0
+Pan Left ,Pan Down,0
+Pan Left ,4 Panels,0
+Pan Right,4 Panels,0
+Pan Down,4 Panels,0
+Measure,Open,0
+3 Panels,Standard I,0
