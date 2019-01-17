@@ -10,7 +10,7 @@ N = 9; % No. of subjects
 D = 55; % No. of descriptors
 num_iter = 1e6; % No. of iterations
 num_bins = 100; % No. of bins for agreement values
-use_custom_dist = 0; % 0 - False, 1 - True
+use_custom_dist = 1; % 0 - False, 1 - True
 global distribution 
 distribution = [0.93, 0.07]; % discrete probabilities of 0 and 1
 N_list = 3:12; % List of values of N
@@ -56,9 +56,13 @@ end
 
 %% Varying number of descriptors
 if(exist(write_fname, 'file'))
-    load(write_fname, 'x_list_vdesc', 'y_list_vdesc')
-    x_list = x_list_vdesc;
-    y_list = y_list_vdesc;
+    try
+        load(write_fname, 'x_list_vdesc', 'y_list_vdesc')
+        x_list = x_list_vdesc;
+        y_list = y_list_vdesc;
+    catch exp
+        [x_list, y_list] = get_pdf_loop_descriptors(N, D_list, 'num_iter', num_iter, 'num_bins', num_bins, 'use_dist', use_custom_dist);
+    end
 else
     [x_list, y_list] = get_pdf_loop_descriptors(N, D_list, 'num_iter', num_iter, 'num_bins', num_bins, 'use_dist', use_custom_dist);
 end

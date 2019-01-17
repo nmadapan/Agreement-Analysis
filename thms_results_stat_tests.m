@@ -45,6 +45,7 @@ end
 % Each row in the file contains: command-name-1, command-name-2, p-value
 formatSpec = '%s,%s,%s\n';
 fprintf(fileID, formatSpec, 'Command-1', 'Command-2', 'P-Value');
+p_value_list = [];
 for cmd_idx1 = 1 : num_cmds
     for cmd_idx2 = cmd_idx1+1:num_cmds
         cmd_name1 = cmd_names{cmd_idx1};
@@ -55,6 +56,7 @@ for cmd_idx1 = 1 : num_cmds
         % Write only the command pairs where differene is significant
         if(H == 1)
             fprintf(fileID, formatSpec, cmd_name1, cmd_name2, num2str(P));
+            p_value_list = [p_value_list; P];
         end
     end
 end
