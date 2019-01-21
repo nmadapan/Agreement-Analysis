@@ -64,9 +64,10 @@ for cmd_idx1 = 1 : num_cmds
 end
 
 %% Condcut False Discovery Rate statistical test
-fprintf('Initial no. of hypotheses rejected - %d / %d\n', sum(h_value_list), numel(p_value_list))
+fprintf('Initial no. of hypotheses rejected %d / %d\n', sum(h_value_list), numel(p_value_list))
 q_value_list = mafdr(p_value_list, 'BHFDR', true);
-fprintf('After BH - FDR: No. of hypotheses rejected - %d / %d\n', sum(q_value_list < 0.05), numel(p_value_list))
+sum(q_value_list < 0.05)
+fprintf('Initial no. of hypotheses rejected %d / %d\n', sum(h_value_list), numel(p_value_list))
 
 fclose(fileID);
 
