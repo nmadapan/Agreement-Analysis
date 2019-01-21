@@ -46,17 +46,19 @@ end
 formatSpec = '%s,%s,%s\n';
 fprintf(fileID, formatSpec, 'Command-1', 'Command-2', 'P-Value');
 p_value_list = [];
+h_value_list = [];
 for cmd_idx1 = 1 : num_cmds
     for cmd_idx2 = cmd_idx1+1:num_cmds
         cmd_name1 = cmd_names{cmd_idx1};
         cmd_name2 = cmd_names{cmd_idx2};
         [H, P] = custom_ttest(pairwise_mat, cmd_idx1, cmd_idx2);
+        p_value_list = [p_value_list; P];
+        h_value_list = [h_value_list; H];
         % H - 1 ==> Null is rejected meaning there is a signification difference
         % H - 0 ==> Failed to reject Null. Meaning we can not say that there is a signification difference
         % Write only the command pairs where differene is significant
         if(H == 1)
             fprintf(fileID, formatSpec, cmd_name1, cmd_name2, num2str(P));
-            p_value_list = [p_value_list; P];
         end
     end
 end
