@@ -47,6 +47,7 @@ formatSpec = '%s,%s,%s\n';
 fprintf(fileID, formatSpec, 'Command-1', 'Command-2', 'P-Value');
 p_value_list = [];
 h_value_list = [];
+cmd_pair_list = [];
 for cmd_idx1 = 1 : num_cmds
     for cmd_idx2 = cmd_idx1+1:num_cmds
         cmd_name1 = cmd_names{cmd_idx1};
@@ -54,6 +55,7 @@ for cmd_idx1 = 1 : num_cmds
         [H, P] = custom_ttest(pairwise_mat, cmd_idx1, cmd_idx2);
         p_value_list = [p_value_list; P];
         h_value_list = [h_value_list; H];
+        cmd_pair_list = [cmd_pair_list; cmd_idx1, cmd_idx2];
         % H - 1 ==> Null is rejected meaning there is a signification difference
         % H - 0 ==> Failed to reject Null. Meaning we can not say that there is a signification difference
         % Write only the command pairs where differene is significant
@@ -67,8 +69,25 @@ end
 fprintf('Initial no. of hypotheses rejected - %d / %d\n', sum(h_value_list), numel(p_value_list))
 q_value_list = mafdr(p_value_list, 'BHFDR', true);
 fprintf('After BH - FDR: No. of hypotheses rejected - %d / %d\n', sum(q_value_list < 0.05), numel(p_value_list))
-
+qh_value_list = q_value_list < 0.05;
 fclose(fileID);
+
+%% Plotting the heat map
+A = zeros(28, 28);
+sign_cmd_pairs = cmd_pair_list(qh_value_list, :);
+for idx = 1:size(sign_cmd_pairs, 1)
+    i = sign_cmd_pairs(idx, 1);
+    j = sign_cmd_pairs(idx, 2);
+    A(i, j) = 1;
+    A(j, i) = 1;
+end
+
+% image(uint8(255*A))
+
+heatmap(A, cmd_names, cmd_names, [], 'FontSize', 14, 'GridLines', '-.', ...
+    'TickAngle', 45, 'ShowAllTicks', true, 'TickFontSize', 12)
+xlabel('Command Names', 'FontSize', 14)
+ylabel('Command Names', 'FontSize', 14)
 
 function [H, P] = custom_ttest(pairwise_mat, cmd_idx1, cmd_idx2)
     %%%%%%%%%%%%%%%
