@@ -8,7 +8,7 @@ clc;
 %% Intialization Parameters
 N = 9; % No. of subjects
 D = 55; % No. of descriptors
-num_iter = 1e6; % No. of iterations
+num_iter = 1e7; % No. of iterations
 num_bins = 100; % No. of bins for agreement values
 use_custom_dist = 1; % 0 - False, 1 - True
 global distribution 
@@ -40,10 +40,11 @@ for idx = 1:numel(x_list)
     legend_list{end+1} = num2str(N_list(idx));
 end
 grid on;
-xlabel('Agreement Rate', 'FontSize', 12)
-ylabel('Normalized Frequency', 'FontSize', 12)
+xlabel('Agreement Rate', 'FontSize', 14)
+ylabel('Normalized Frequency', 'FontSize', 14)
 title('PDF - Varying no. of subjects', 'FontSize', 14)
-legend(legend_list)
+ll = legend(legend_list);
+set(ll, 'FontSize', 14);
 hold off;
 % Saving the files
 x_list_vsub = x_list;
@@ -75,10 +76,11 @@ for idx = 1:numel(x_list)
     legend_list{end+1} = num2str(D_list(idx));
 end
 grid on;
-xlabel('Agreement Rate', 'FontSize', 12)
-ylabel('Normalized Frequency', 'FontSize', 12)
+xlabel('Agreement Rate', 'FontSize', 14)
+ylabel('Normalized Frequency', 'FontSize', 14)
 title('PDF - Varying no. of descriptors', 'FontSize', 14)
-legend(legend_list)
+ll = legend(legend_list);
+set(ll, 'FontSize', 14)
 hold off;
 % Saving the files
 x_list_vdesc = x_list;
@@ -107,7 +109,9 @@ function [x_list, y_list] = get_pdf_loop_subjects(N_list, D, varargin)
     if(disp_flag) progressbar, end
     for idx = 1 : numel(N_list)
         N = N_list(idx);
+        tic;
         [t, freqs] = get_pdf(N, D, 'num_iter', num_iter, 'num_bins', num_bins, 'disp_flag', 0, 'use_dist', use_dist);
+        toc;
         x_list{end+1} = t;
         y_list{end+1} = freqs;
         if(disp_flag) progressbar(idx/numel(N_list)), end;
@@ -132,7 +136,9 @@ function [x_list, y_list] = get_pdf_loop_descriptors(N, D_list, varargin)
     if(disp_flag) progressbar, end;
     for idx = 1 : numel(D_list)
         D = D_list(idx);
+        tic;
         [t, freqs] = get_pdf(N, D, 'num_iter', num_iter, 'num_bins', num_bins, 'disp_flag', 0, 'use_dist', use_dist);
+        toc;
         x_list{end+1} = t;
         y_list{end+1} = freqs;
         if(disp_flag) progressbar(idx/numel(D_list)), end;
